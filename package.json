@@ -4,7 +4,8 @@
   "description": "前端在线数据mock服务",
   "main": "app.js",
   "scripts": {
-    "bootstrap":"rm -rf node_modules && npm i",
+    "prebootstrap": "rm -rf node_modules",
+    "bootstrap": "npm i",
     "test": "node test/gen &&  NODE_ENV=test jest --runInBand --forceExit",
     "test:watch": "npm run test -- --watch",
     "test:cover": "npm run test -- --coverage",
@@ -17,7 +18,7 @@
     "build:dev": "rimraf dist && npm run build:client && npm run build:server",
     "build:client": "webpack --config build/webpack.client.config.js --progress --hide-modules",
     "build:server": "webpack --config build/webpack.server.config.js --progress --hide-modules",
-    "pm2:start": " NODE_ENV=production pm2 start app.js --watch"
+    "pm2:start": " NODE_ENV=production pm2 start app.js"
   },
   "license": "GPL-3.0",
   "keywords": [
