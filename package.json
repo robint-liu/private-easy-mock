@@ -1,7 +1,7 @@
 {
-  "name": "easy-mock",
-  "version": "1.6.0",
-  "description": "可视化模拟数据生成服务",
+  "name": "private-easy-mock",
+  "version": "0.0.1",
+  "description": "前端在线数据mock服务",
   "main": "app.js",
   "scripts": {
     "test": "node test/gen && cross-env NODE_ENV=test jest --runInBand --forceExit",
@@ -19,7 +19,6 @@
     "pm2:start": "cross-env NODE_ENV=production pm2 start app.js --name easy-mock --watch",
     "pm2:stop": "pm2 stop easy-mock"
   },
-  "author": "Chuangker",
   "license": "GPL-3.0",
   "keywords": [
     "easy-mock",
