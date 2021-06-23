@@ -15,7 +15,9 @@
     "build": "cross-env NODE_ENV=production npm run build:dev",
     "build:dev": "rimraf dist && npm run build:client && npm run build:server",
     "build:client": "webpack --config build/webpack.client.config.js --progress --hide-modules",
-    "build:server": "webpack --config build/webpack.server.config.js --progress --hide-modules"
+    "build:server": "webpack --config build/webpack.server.config.js --progress --hide-modules",
+    "pm2:start": "cross-env NODE_ENV=production pm2 start app.js --name easy-mock --watch",
+    "pm2:stop": "pm2 stop easy-mock"
   },
   "author": "Chuangker",
   "license": "GPL-3.0",
@@ -56,7 +58,7 @@
     "mongoose": "^4.13.9",
     "path-to-regexp": "^2.1.0",
     "pino-multi-stream": "^3.1.2",
-    "restc": "^0.2.2",
+    "restc": "^0.5.0",
     "rimraf": "^2.6.2",
     "swagger-parser-mock": "^1.1.2",
     "universal-cookie": "^2.1.2",

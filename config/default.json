@@ -8,7 +8,7 @@
   "redis": {
     "keyPrefix": "[Easy Mock]",
     "port": 6379,
-    "host": "localhost",
+    "host": "172.16.253.108",
     "password": "",
     "db": 0
   },
